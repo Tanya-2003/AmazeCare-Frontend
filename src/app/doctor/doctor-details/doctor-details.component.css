@@ -1,0 +1,40 @@
+.doctor-details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .doctor-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .doctor-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .doctor-info {
+    flex-grow: 1;
+  }
+  
+  .btn-appointment {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn-appointment:hover {
+    background-color: #0056b3;
+  }
+  
+  .appointment-form-section {
+    margin-top: 50px;
+  }
+  

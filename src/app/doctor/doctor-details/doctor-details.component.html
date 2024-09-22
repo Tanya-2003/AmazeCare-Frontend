@@ -1,0 +1,24 @@
+<div *ngIf="doctor" class="doctor-details-container">
+  <div class="doctor-header">
+    <img [src]="doctor.image" alt="Doctor Image" class="doctor-image">
+    <div class="doctor-info">
+      <h1>{{ doctor.name }}</h1>
+      <p><strong>Specialty:</strong> {{ doctor.speciality }}</p>
+      <p><strong>Experience:</strong> {{ doctor.experience || 'N/A' }} Years</p>
+      <p><strong>Qualification:</strong> {{ doctor.qualification || 'N/A' }}</p>
+      <button class="btn-appointment" (click)="scrollToForm()">Book an Appointment</button>
+    </div>
+  </div>
+  <div class="doctor-bio">
+    <h3>About {{ doctor.name }}</h3>
+    <p>{{ doctor.bio || 'We are committed to your health and well-being.' }}</p>
+  </div>
+</div>
+<div *ngIf="!doctor">
+  <p>Loading doctor details...</p>
+</div>
+
+<!-- Appointment form section 
+<div id="appointment-form" class="appointment-form-section">
+  <app-appointment-form></app-appointment-form> Placeholder for appointment form 
+</div>-->

@@ -1,0 +1,43 @@
+<main class="login-page">
+    <div class="login-container">
+      <section class="login-form-section">
+        <header class="brand-header">
+          <img src="assets/icon/logo.svg" alt="Amaze Care Logo" class="brand-logo" />
+          <h1 class="brand-name">Amaze Care</h1>
+        </header>
+        <h2 class="system-title">Health Management System</h2>
+        <p class="login-instruction">Sign in by entering the information below</p>
+        <form class="login-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="input-group">
+            <label for="email" class="visually-hidden">Email Address</label>
+            <input type="email" id="email" class="form-input" placeholder="email@example.com" aria-label="Email Address" />
+            <span class="input-icon arrow-icon" aria-hidden="true"></span>
+          </div>
+          <div class="input-group">
+            <label for="password" class="visually-hidden">Password</label>
+            <input type="password" id="password" class="form-input" placeholder="***********************" aria-label="Password" />
+            <span class="input-icon eye-icon" aria-hidden="true"></span>
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox-input" />
+              <span class="checkbox-text">Remember Me</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot Password</a>
+          </div>
+          <button type="submit" class="login-button">
+            Login
+            <img src="assets/icon/arrow-icon.png" alt="" class="button-icon" />
+          </button>
+        </form>
+        <p class="signup-prompt">
+          Don't have an account? Create one <a href="#" class="signup-link">here.</a>
+        </p>
+      </section>
+      <section class="login-image-section">
+        <img src="assets/images/login-logo1.png" alt="Healthcare illustration" class="login-image" />
+        <img src="assets/images/login-logo.png" alt="" class="login-overlay-image" />
+      </section>
+    </div>
+  </main>
+  

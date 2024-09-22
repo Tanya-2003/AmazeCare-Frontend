@@ -1,0 +1,27 @@
+<!--<app-header></app-header>
+<app-hero></app-hero>
+<app-doctor-card></app-doctor-card>
+<div class="content">
+    <router-outlet></router-outlet>  This is where login/register will show 
+</div>
+<app-footer></app-footer>
+
+<h1> Angular router app</h1>
+<nav>
+    <ul>
+        <li><a routerLink = "login" routerLinkActive = active>Login</a></li>
+        <li><a routerLink = "signup" routerLinkActive = active>Signup</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+-->
+<app-header></app-header>
+<app-hero></app-hero>
+<div class="container">
+    <app-doctor-card (doctorSelected)="onDoctorSelected($event)"></app-doctor-card>
+    <!-- Show the doctor details only when a doctor is selected -->
+    <app-doctor-details *ngIf="selectedDoctor" [doctor]="selectedDoctor"></app-doctor-details>
+  </div>  
+<app-footer></app-footer>
+
+<router-outlet></router-outlet>
